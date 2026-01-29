@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -std=c11 -g -lm
 TARGET = pso
 
 # Lista plików źródłowych i obiektowych
-SRCS = main.c map.c pso.c logger.c utils.c
+SRCS = main.c map.c pso.c logger.c utils.c tests.c
 OBJS = $(SRCS:.c=.o)
 
 # Domyślny cel

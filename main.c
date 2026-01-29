@@ -5,9 +5,17 @@
 #include "map.h"
 #include "pso.h"
 #include "logger.h"
+#include "tests.h"
 
 int main(int argc, char *argv[]) {
     srand(time(NULL));
+
+    for (int i = 1; i < argc; i++) {
+        if (strcmp(argv[i], "--test") == 0) {
+            run_all_tests();
+            return 0; 
+        }
+    }
 
     char *map_file = NULL;
     int particles_count = 30;
