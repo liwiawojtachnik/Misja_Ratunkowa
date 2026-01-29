@@ -13,7 +13,7 @@ Map* load_map(const char *filename){    //wczytuje mape i zwraca wskaznik na str
         fclose(f);
         return NULL;
     }
-    if (fcanf(f, "%d, %d", &map->width, &map->height) != 2){
+    if (fscanf(f, "%d, %d", &map->width, &map->height) != 2){
         fprintf(stderr, "Blad: nieprawidlowy format naglowka mapy.\n");
         free(map);
         fclose(f);
